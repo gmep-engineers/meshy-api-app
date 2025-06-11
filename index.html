@@ -1,0 +1,27 @@
+<html>
+    <body>
+        
+        <script>
+            const headers = { Authorization: `Bearer ${YOUR_API_KEY}` };
+            const payload = {
+            // Using data URI example
+            // image_url: 'data:image/png;base64,${YOUR_BASE64_ENCODED_IMAGE_DATA}',
+            image_url: "<your publicly accessible image url or base64-encoded data URI>",
+            enable_pbr: true,
+            should_remesh: true,
+            should_texture: true
+            };
+
+            try {
+            const response = await axios.post(
+                'https://api.meshy.ai/openapi/v1/image-to-3d',
+                payload,
+                { headers }
+            );
+            console.log(response.data);
+            } catch (error) {
+            console.error(error);
+            }
+        </script>
+    </body>
+</html>

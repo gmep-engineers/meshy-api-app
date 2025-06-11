@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div class="main-subsection-container uploader">
+        <form
+          action="<%= config.BASE_URL %>/api/image"
+          method="post"
+          enctype="multipart/form-data"
+          class="upload-input"
+        >
+          <input
+            type="file"
+            id="image"
+            name="image"
+            accept="image/png, image/jpeg"
+            class="button"
+          />
+          <div class="upload-button">
+            <input
+              type="submit"
+              class="button"
+              value="Upload"
+              id="upload-button"
+            />
+          </div>
+        </form>
+    </div>
+</div>
