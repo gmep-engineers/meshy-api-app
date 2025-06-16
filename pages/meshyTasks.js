@@ -40,9 +40,9 @@ const meshyTasks = async function (req) {
           </div>
         </li>
       `;
-      console.log('htmltasks:\n', params.htmlTasks)
-      console.log('id:\n', params.taskId);
-      console.log('date:\n', params.date)
+      // console.log('htmltasks:\n', params.htmlTasks)
+      // console.log('id:\n', params.taskId);
+      // console.log('date:\n', params.date)
     } catch (err) {
       console.error(err);
     }

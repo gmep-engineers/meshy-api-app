@@ -31,15 +31,15 @@
         Submit Text
       </button>
     </div>
-    <div class="main-subsection-container">
+    <div class="main-subsection-container text-input">
       <button onclick="seeAllPics()">
         seeAllPics
       </button>
     </div>
 </div>
 <script>
-  const seeAllPics = async function() {
-    
+  const seeAllPics = function() {
+      window.location.href = "<%= config.BASE_URL %>/meshy/tasks";
   }
   const submitText = async function() { 
     const textarea = document.getElementById("input");
@@ -120,11 +120,9 @@
   .text-input textarea {
     width: 100%;
     height: 100px;
-    padding: 10px;
     font-size: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    resize: vertical;
   }
 
   .text-input button {
