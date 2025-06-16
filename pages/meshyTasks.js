@@ -32,8 +32,17 @@ const meshyTasks = async function (req) {
       );
       console.log(response.data);
       params.htmlTasks += `
-        <li><img src="${response.data.thumbnail_url}" /> ${date} ${response.data.progress}% complete <a href="${response.data.model_urls.obj}"> download </a> </li>
-        `;
+        <li class="task-item">
+          <img src="${response.data.thumbnail_url}" />
+          <div>
+            <br>${date} - ${response.data.progress}% complete<br/>
+            <a href="${response.data.model_urls.obj}" target="_blank" style="color: #007bff;">Download</a>
+          </div>
+        </li>
+      `;
+      console.log('htmltasks:\n', params.htmlTasks)
+      console.log('id:\n', params.taskId);
+      console.log('date:\n', params.date)
     } catch (err) {
       console.error(err);
     }
