@@ -24,6 +24,7 @@ app.get("/meshy/tasks", async (req, res) => {
   await getPublicPage(req, res, meshyTasks);
 });
 
+
 app.get("/", async (req, res) => {
   await getPublicPage(req, res, home);
 });

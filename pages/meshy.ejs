@@ -31,8 +31,16 @@
         Submit Text
       </button>
     </div>
+    <div class="main-subsection-container text-input">
+      <button onclick="seeAllPics()">
+        seeAllPics
+      </button>
+    </div>
 </div>
 <script>
+  const seeAllPics = function() {
+      window.location.href = "<%= config.BASE_URL %>/meshy/tasks";
+  }
   const submitText = async function() { 
     const textarea = document.getElementById("input");
     if (textarea.value) {
@@ -54,3 +62,89 @@
     }
   }
 </script>
+</script>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .main-container {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+
+  .main-subsection-container {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .uploader .upload-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .upload-button {
+    margin-top: 10px;
+  }
+
+  .text-input textarea {
+    width: 100%;
+    height: 100px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .text-input button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .text-input button:hover {
+    background-color: #218838;
+  }
+
+  .main-subsection-container:nth-child(2) {
+    font-weight: bold;
+    color: #666;
+    font-size: 18px;
+  }
+</style>
