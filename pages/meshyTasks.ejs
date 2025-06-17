@@ -1,4 +1,14 @@
 <div class="main-container">
+  <header style="display: flex ;flex-direction: row;">
+    <button onclick="BtnBack()" style=" padding: 10px 10px;
+    margin: 30px 10px; background-color: lightslategray; color: #fff;">Back</button>
+  <h2 style="background-color: #343a40;
+  color: white;
+  padding: 15px 30px;
+  width: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;">Image Gallery</h2>
+</header>
     <ul class="task-list">
         <%- htmlTasks %>
     </ul>
@@ -29,3 +39,9 @@
     border-radius: 8px;
   }
 </style>
+
+<script>
+  const BtnBack = function() {
+      window.location.href = "<%= config.BASE_URL %>/meshy";
+  }
+  </script>
